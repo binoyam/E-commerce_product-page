@@ -127,7 +127,7 @@ img.profile-pic {
     border-radius: 50%;
     border: 3px solid transparent;
     margin-left: 2rem;
-    
+
 }
 
 img.cart {
@@ -142,6 +142,9 @@ img.profile-pic:hover {
 
 /* main area elemnts styles*/
 /*product preview and info are*/
+main {
+    position: relative;
+}
 
 .product-div {
     display: flex;
@@ -157,47 +160,35 @@ img.profile-pic:hover {
 
 /* product image display area */
 
-.product-images{
+.product-images {
     padding: 0 5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    height: 600px;
+
 }
-.product-image-large{
+
+.product-image-large {
     border-radius: 15px;
     overflow: hidden;
 }
-.product-image-large img{
+
+img.preview {
     width: 100%;
-    display: inherit;
 }
-.product-image-small{
+
+.product-image-small {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
 }
-.product-image-small img{
+
+img.thumbnail {
     width: 20%;
-    display: inherit;
     border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* product info area / header and paragraph*/
@@ -312,3 +303,104 @@ button.add {
 button.add img {
     margin-right: 1rem;
 }
+
+/* lightbox */
+.light-box-div {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, 0.75);
+}
+
+.light-box {
+    width: 500px;
+    height: 600px;
+}
+svg.close{
+    float: right;
+    width: 22px;
+    height: 22px;
+    margin-bottom: 1.3rem;
+    cursor: pointer;
+}
+#close-path{
+    scale: 1.6;
+    fill: #ffffff;
+}
+svg.close:hover #close-path{
+    fill: var(--Orange);
+}
+.lightbox-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 500px;
+    height: 600px;
+
+}
+
+.lightbox-image-large {
+    width: 500px;
+    position: relative;
+}
+
+img.lightbox-preview {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.lightbox-image-small {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+img.lightbox-thumbnail {
+    width: 20%;
+    border-radius: 10px;
+}
+
+.previous,
+.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.previous{
+    left: -22px;
+}
+.next{
+    right: -22px;
+}
+.previous img,
+.next img{
+    width: 12px;
+    height: 18px;
+}
+/* .previous:hover,
+.next:hover{
+    background-color: var(--Orange);
+} */
+
+/** give the svg and path id so i can style
+the color on hover*/

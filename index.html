@@ -9,74 +9,112 @@
 </head>
 
 <body>
-  <nav class="nav-bar">
-    <img class="menu-btn" src="./images/icon-menu.svg" alt="menu-button">
-    <div class="logo-menu-div">
-      <div class="logo-div">
-        <img class="logo" src="./images/logo.svg" alt="logo">
+  <div class="full">
+
+    <nav class="nav-bar">
+      <img class="menu-btn" src="./images/icon-menu.svg" alt="menu-button">
+      <div class="logo-menu-div">
+        <div class="logo-div">
+          <img class="logo" src="./images/logo.svg" alt="logo">
+        </div>
+        <ul class="menu">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </div>
-      <ul class="menu">
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-    <div class="cart-profile-div">
-      <img class="cart" src="./images/icon-cart.svg" alt="icon-cart">
+      <div class="cart-profile-div">
+        <img class="cart" src="./images/icon-cart.svg" alt="icon-cart">
 
-      <img class="profile-pic" src="./images/image-avatar.png" alt="image-avatar">
-    </div>
-    <div class="cart-div">
-      <p>Cart</p>
-    </div>
-  </nav>
-  <main>
-    <div class="product-div">
-
-      <div class="product-images">
-        <div class="product-image-large">
-          <img src="./images/image-product-1.jpg" alt="image-product-1">
-        </div>
-        <div class="product-image-small">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
-          <img src="./images/image-product-2-thumbnail.jpg" alt="image-product-1-thumbnail">
-          <img src="./images/image-product-3-thumbnail.jpg" alt="image-product-1-thumbnail">
-          <img src="./images/image-product-4-thumbnail.jpg" alt="image-product-1-thumbnail">
-        </div>
-        
+        <img class="profile-pic" src="./images/image-avatar.png" alt="image-avatar">
       </div>
+      <div class="cart-div">
+        <p>Cart</p>
+      </div>
+    </nav>
+    <main>
+      <div class="product-div">
 
-      <div class="product-info">
-
-        <p class="title">Sneaker Company</p>
-        <h1 class="product-name">Fall Limited Edition Sneakers</h1>
-        <p class="product-detail">
-          These low-profile sneakers are your perfect casual wear companion. Featuring a
-          durable rubber outer sole, they’ll withstand everything the weather can offer.
-        </p>
-
-        <div class="prices">
-          <p class="price-current">$125.00 <span class="discount">50%</span></p>
-          <p class="price-old">$250.00</p>
-        </div>
-
-        <div class="add-to-cart-div">
-
-          <div class="select-quantity">
-            <img src="./images/icon-minus.svg" alt="icon-minus">
-            <span class="quantity">0</span>
-            <img src="./images/icon-plus.svg" alt="icon-plus">
+        <div class="product-images">
+          <div class="product-image-large">
+            <img class="preview" src="./images/image-product-1.jpg" alt="image-product-1">
+          </div>
+          <div class="product-image-small">
+            <img class="thumbnail active" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+            <img class="thumbnail" src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail">
+            <img class="thumbnail" src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail">
+            <img class="thumbnail" src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail">
           </div>
 
-          <button class="add"><img src="./images/icon-cart-btn.svg" alt="icon-cart">Add to cart</button>
-
         </div>
 
+        <div class="product-info">
+
+          <p class="title">Sneaker Company</p>
+          <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+          <p class="product-detail">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+
+          <div class="prices">
+            <p class="price-current">$125.00 <span class="discount">50%</span></p>
+            <p class="price-old">$250.00</p>
+          </div>
+
+          <div class="add-to-cart-div">
+
+            <div class="select-quantity">
+              <img src="./images/icon-minus.svg" alt="icon-minus">
+              <span class="quantity">0</span>
+              <img src="./images/icon-plus.svg" alt="icon-plus">
+            </div>
+
+            <button class="add"><img src="./images/icon-cart-btn.svg" alt="icon-cart">Add to cart</button>
+
+          </div>
+
+        </div>
       </div>
+
+    </main>
+    <div class="light-box-div">
+      <div class="light-box">
+
+        <svg class="close" xmlns="http://www.w3.org/2000/svg"><path id="close-path" d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
+
+        <div class="lightbox-images">
+
+          <div class="lightbox-image-large">
+            <button class="previous"><img src="./images/icon-previous.svg" alt="icon-previous"></button>
+
+            <img class="lightbox-preview" src="./images/image-product-1.jpg" alt="image-product-1">
+
+            <button class="next"><img src="./images/icon-next.svg" alt="icon-next"></button>
+
+          </div>
+
+          <div class="lightbox-image-small">
+            <img class="lightbox-thumbnail active" src="./images/image-product-1-thumbnail.jpg"
+              alt="image-product-1-thumbnail">
+            <img class="lightbox-thumbnail" src="./images/image-product-2-thumbnail.jpg"
+              alt="image-product-2-thumbnail">
+            <img class="lightbox-thumbnail" src="./images/image-product-3-thumbnail.jpg"
+              alt="image-product-3-thumbnail">
+            <img class="lightbox-thumbnail" src="./images/image-product-4-thumbnail.jpg"
+              alt="image-product-4-thumbnail">
+          </div>
+
+        </div>
+      </div>
+
+
+
+
     </div>
-  </main>
+  </div>
 
 
 
