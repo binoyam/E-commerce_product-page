@@ -36,10 +36,11 @@ a {
 
 img {
     max-width: 100%;
+    cursor: pointer;
 }
 
-/*note change the border bottom color for nav and 
-cart-div  to lightgryish blue */
+/*note ***change the border bottom color for nav and 
+cart-div and quantiy selcetor div  to lightgryish blue */
 
 /* elemnts that are only visalbe for mobile screens*/
 .menu-btn {
@@ -97,7 +98,6 @@ cart-div  to lightgryish blue */
 
 img.logo {
     width: 100%;
-    cursor: pointer;
 }
 
 .menu {
@@ -127,11 +127,11 @@ img.profile-pic {
     border-radius: 50%;
     border: 3px solid transparent;
     margin-left: 2rem;
-    cursor: pointer;
+    
 }
 
 img.cart {
-    cursor: pointer;
+    width: 25px;
 }
 
 img.profile-pic:hover {
@@ -146,14 +146,59 @@ img.profile-pic:hover {
 .product-div {
     display: flex;
     align-items: center;
-    margin: 5rem;
-    background-color: rgb(247, 250, 253);
+    margin: 4rem;
+    background-color: var(--White);
 }
 
 .product-images,
 .product-info {
     width: 50%;
 }
+
+/* product image display area */
+
+.product-images{
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.product-image-large{
+    border-radius: 15px;
+    overflow: hidden;
+}
+.product-image-large img{
+    width: 100%;
+    display: inherit;
+}
+.product-image-small{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.product-image-small img{
+    width: 20%;
+    display: inherit;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* product info area / header and paragraph*/
 .product-info {
@@ -183,8 +228,7 @@ p.product-detail {
     margin-bottom: 1.5rem;
 }
 
-/* prices / quantity selection area
-and add to cart button */
+/* prices / current price and old price */
 
 .prices {
     display: flex;
@@ -210,3 +254,61 @@ span.discount {
     border-radius: 8px;
 }
 
+p.price-old {
+    font-size: 18px;
+    color: var(--Darkgrayishblue);
+    text-decoration: line-through;
+}
+
+/*quantity selection area */
+
+.add-to-cart-div {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.select-quantity,
+button.add {
+    padding: 1rem;
+    border-radius: 7px;
+}
+
+.select-quantity {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Grayishblue);
+}
+
+.select-quantity img {
+    width: 14px;
+}
+
+span.quantity {
+    color: var(--Black);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*  add to cart button */
+button.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    border: none;
+    outline: none;
+    background-color: var(--Orange);
+    color: var(--White);
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0px 10px 20px 0px var(--Orange);
+    cursor: pointer;
+}
+
+button.add img {
+    margin-right: 1rem;
+}
