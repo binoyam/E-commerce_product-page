@@ -8,6 +8,7 @@ const cart_content = document.querySelector(".cart-div"); //cart dropdown
 const cartNotification = document.querySelector(".notification");//notification
 const cartBox = document.querySelector(".cart-box"); // cart content holder
 const cartEmptyMessage = document.querySelector(".zero");// your cart is empty message
+const deleteCart = document.querySelector(".delete");// delete buttton inside cart
 
 /* product quantity selection and add to cart variables*/
 const minusBtn = document.querySelector(".minus"); //minus sign btn
@@ -67,7 +68,7 @@ function addToCart() {
         cartEmptyMessage.style.display = "none";
         const total = 125 * counter;
         cartBox.style.display = "flex";
-        
+
         cartBox.innerHTML = `<div class="cart-content">
         <img class="prd" src="./images/image-product-1-thumbnail.jpg" alt="product1">
         <div class="product-detail">
@@ -79,18 +80,26 @@ function addToCart() {
             <span class="total">$${total}</span>
           </p>
         </div>
-        <button class="delete"><img src="./images/icon-delete.svg" alt="icon-delete"></button>
+        <button class="delete" onClick="removeCart()"><img src="./images/icon-delete.svg" alt="icon-delete"></button>
       </div>
-      <button class="checkout">Checkout</button>`;
+      <button class="checkout" onClick="checkout()">Checkout</button>`;
 
         cartNotification.classList.add("notify");
         cartNotification.innerText = counter;
     }
-    else{
+    else {
         cartEmptyMessage.style.display = "block";
         cartBox.style.display = "none";
         cartNotification.classList.remove("notify");
     }
+}
+
+/*function: remove cart contents*/
+function removeCart() {
+    // counter = 0;
+    cartEmptyMessage.style.display = "block";
+    cartBox.style.display = "none";
+    cartNotification.classList.remove("notify");
 }
 
 
@@ -100,8 +109,5 @@ function addToCart() {
 
 
 
-
-/* todo */
-/* do the add to cart functions */
 /* do mobile screen functions */
 /* extra popup for after checkout , maybe a form or a thank you card*/
