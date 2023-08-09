@@ -40,7 +40,8 @@ img {
 }
 
 /*note ***change the border bottom color for nav and 
-cart-div and quantiy selcetor div  to lightgryish blue */
+cart-div and quantiy selcetor div  to lightgryish blue
+group all common buttonstyles/fontstyles/... together to avoid repeating */
 
 /* elemnts that are only visalbe for mobile screens*/
 .menu-btn {
@@ -105,7 +106,8 @@ img.logo {
 .cart-profile-div {
     position: relative;
 }
-span.notification{
+
+span.notification {
     position: absolute;
     min-width: 0px;
     height: 0px;
@@ -119,11 +121,13 @@ span.notification{
     padding: 0;
     border-radius: 10px;
 }
-span.notification.notify{
+
+span.notification.notify {
     min-width: 30px;
     height: 20px;
     padding: 2px 5px;
 }
+
 img.cart {
     width: 25px;
 }
@@ -166,12 +170,95 @@ img.profile-pic:hover {
     bottom: -280px;
 }
 
-.cart-div p.top {
+.cart-div p.heading {
     padding: 1rem 1rem 2rem;
     color: var(--Black);
     font-size: 18px;
     font-weight: 700;
     border-bottom: 2px solid var(--Grayishblue);
+}
+
+.cart-div p.zero {
+    display: none;
+    margin-top: 6rem;
+    text-align: center;
+    color: var(--Darkgrayishblue);
+    font-weight: 700;
+}
+
+/* cart dropdown contents*/
+.cart-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 220px;
+}
+
+.cart-box img.prd {
+    width: 20%;
+    max-width: 80px;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.cart-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-detail {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+p.calculate {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+p.name,
+span.price,
+span.times,
+span.amount {
+    font-size: 18px;
+    color: var(--Darkgrayishblue);
+    font-weight: 700;
+}
+
+span.total {
+    color: var(--Black);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+button.delete {
+    width: 5%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button.delete img {
+    width: 100%;
+}
+
+button.checkout {
+    border: none;
+    outline: none;
+    background-color: var(--Orange);
+    color: var(--White);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 7px;
+    cursor: pointer;
 }
 
 /* end of nav elemnt styes*/

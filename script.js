@@ -68,11 +68,5 @@ function decrementQuantity() {
 addToCartBtn.addEventListener('click', addToCart);
 
 function addToCart() {
-    if (prodQuantity.innerText > 0) {
-        cartNotification.classList.add("notify");
-        cartNotification.innerText = prodQuantity.innerText;
-    }
-    else {
-        cartNotification.classList.remove("notify");
-    }
+
 }
