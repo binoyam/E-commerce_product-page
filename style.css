@@ -144,9 +144,6 @@ img.profile-pic:hover {
     border: 3px solid var(--Orange);
 }
 
-
-
-
 /* elemnts that are interactive (visalble on click) */
 /* cart drop-down*/
 .cart-div {
@@ -436,3 +433,4 @@ button.addtocart {
 button.addtocart img {
     margin-right: 1rem;
 }
+/* make responisve*/

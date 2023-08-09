@@ -70,3 +70,7 @@ addToCartBtn.addEventListener('click', addToCart);
 function addToCart() {
 
 }
+/* todo */
+/* do the add to cart functions */
+/* do mobile screen functions */
+/* extra popup for after checkout , maybe a form or a thank you card*/
