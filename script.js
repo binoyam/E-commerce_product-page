@@ -6,6 +6,8 @@ const productDisplay = document.querySelector(".preview"); //big image
 const cartBtn = document.querySelector(".cart"); //cart icon
 const cart_content = document.querySelector(".cart-div"); //cart dropdown
 const cartNotification = document.querySelector(".notification");//notification
+const cartBox = document.querySelector(".cart-box"); // cart content holder
+const cartEmptyMessage = document.querySelector(".zero");// your cart is empty message
 
 /* product quantity selection and add to cart variables*/
 const minusBtn = document.querySelector(".minus"); //minus sign btn
@@ -17,13 +19,6 @@ let counter = 0;//for current quantity display
 /* function: show/ hide cart dropdown */
 cartBtn.addEventListener('click', () => {
     cart_content.classList.toggle("active-cart");
-    if (cartNotification.innerText) {
-        const message = document.createElement("P");
-        const text = document.createTextNode("Your cart is empty.");
-        message.appendChild(text);
-        message.style.color = "var(--Darkgrayishblue)";
-        cart_content.appendChild(message);
-    }
 });
 
 /* function: display the large image of the thumbnail clicked */
@@ -68,8 +63,44 @@ function decrementQuantity() {
 addToCartBtn.addEventListener('click', addToCart);
 
 function addToCart() {
+    if (counter > 0) {
+        cartEmptyMessage.style.display = "none";
+        const total = 125 * counter;
+        cartBox.style.display = "flex";
+        
+        cartBox.innerHTML = `<div class="cart-content">
+        <img class="prd" src="./images/image-product-1-thumbnail.jpg" alt="product1">
+        <div class="product-detail">
+          <p class="name">Fall Limited Edition Sneakers</p>
+          <p class="calculate">
+            <span class="price">$125.00</span>
+            <span class="times">&times;</span>
+            <span class="amount">${counter}</span>
+            <span class="total">$${total}</span>
+          </p>
+        </div>
+        <button class="delete"><img src="./images/icon-delete.svg" alt="icon-delete"></button>
+      </div>
+      <button class="checkout">Checkout</button>`;
 
+        cartNotification.classList.add("notify");
+        cartNotification.innerText = counter;
+    }
+    else{
+        cartEmptyMessage.style.display = "block";
+        cartBox.style.display = "none";
+        cartNotification.classList.remove("notify");
+    }
 }
+
+
+
+
+
+
+
+
+
 /* todo */
 /* do the add to cart functions */
 /* do mobile screen functions */

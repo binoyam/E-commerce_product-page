@@ -176,7 +176,7 @@ img.profile-pic:hover {
 }
 
 .cart-div p.zero {
-    display: none;
+    /* display: none; */
     margin-top: 6rem;
     text-align: center;
     color: var(--Darkgrayishblue);
@@ -185,11 +185,11 @@ img.profile-pic:hover {
 
 /* cart dropdown contents*/
 .cart-box {
+    padding: 2rem;
+    height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem;
-    height: 220px;
 }
 
 .cart-box img.prd {
