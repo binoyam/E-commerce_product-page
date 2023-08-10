@@ -9,7 +9,6 @@
     --Lightgrayishblue: hsl(223, 64%, 98%);
     --White: hsl(0, 0%, 100%);
     --Black: hsl(0, 0%, 0%);
-    /*(with 75% opacity for lightbox background)*/
 }
 
 * {
@@ -50,7 +49,6 @@ group all common buttonstyles/fontstyles/... together to avoid repeating */
     display: none;
 }
 
-
 /* nav bar */
 .nav-bar {
     display: flex;
@@ -61,7 +59,6 @@ group all common buttonstyles/fontstyles/... together to avoid repeating */
     background-color: var(--White);
     border-bottom: 1px solid var(--Grayishblue);
     position: relative;
-    /* overflow-x: hidden; */
 }
 
 .logo-menu-div,
@@ -289,7 +286,6 @@ main {
     flex-direction: column;
     gap: 2rem;
     height: 600px;
-
 }
 
 .product-image-large {
@@ -435,5 +431,7 @@ button.addtocart {
 button.addtocart img {
     margin-right: 1rem;
 }
-
-/* make responisve*/
+/*tasks left
+** styling for mobile screen menu
+** styling for mobile screen layout
+/* make responisve for tablet and mobile screens*/

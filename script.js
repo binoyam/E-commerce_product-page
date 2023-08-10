@@ -163,13 +163,7 @@ function previousImage() {
     updateImage();
 }
 
-
-
-
-
-
-
-
-
-/* do mobile screen functions */
-/* extra popup for after checkout , maybe a form or a thank you card*/
+/*tasks left*/
+/* function for mobile screen
+** menu
+*/
