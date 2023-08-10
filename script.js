@@ -22,8 +22,14 @@ const closeBtn = document.querySelector(".close");// close lightbox icon
 const previousBtn = document.querySelector(".previous-btn");// left arrow
 const nextBtn = document.querySelector(".next-btn");// right arrow
 const lightboxDisplay = document.querySelector(".lightbox-preview")//lightbox big image
-const lightBoxThumbs = document.querySelectorAll(".thumbnail");//lightbox thumbnails//maynot be unneccessary?
 
+/* images urls*/
+const imageUrls = [
+    './images/image-product-1.jpg',
+    './images/image-product-2.jpg',
+    './images/image-product-3.jpg',
+    './images/image-product-4.jpg'
+];
 
 /* function: show/ hide cart dropdown */
 cartIcon.addEventListener('click', () => {
@@ -32,7 +38,6 @@ cartIcon.addEventListener('click', () => {
 
 /* function: display the large image of the thumbnail clicked 
         for both normal and lightbox*/
-
 thumbnails.forEach((smlimg) => {
     smlimg.addEventListener('click', () => {
         thumbnails.forEach((img) => {
@@ -62,7 +67,6 @@ thumbnails.forEach((smlimg) => {
 });
 
 /* function: update qunatity */
-
 plusBtn.addEventListener('click', incrementQuantity);
 minusBtn.addEventListener('click', decrementQuantity)
 
@@ -78,7 +82,6 @@ function decrementQuantity() {
 }
 
 /* function: add to cart */
-
 addToCartBtn.addEventListener('click', addToCart);
 
 function addToCart() {
@@ -119,10 +122,12 @@ function removeCart() {
     cartNotification.classList.remove("notify");
     prodQuantity.innerText = counter;
 }
+
 /* function: open lightbox */
 mainImgDisplay.addEventListener('click', () => {
     lightBox.classList.remove("hidden");
 });
+
 /*function: close lightbox effect */
 closeBtn.addEventListener('click', () => {
     lightBox.classList.add("hidden");
@@ -132,33 +137,28 @@ closeBtn.addEventListener('click', () => {
 previousBtn.addEventListener('click', previousImage);
 nextBtn.addEventListener('click', nextImage);
 
-/* image gallery variables*/
-const images = [
-    './images/image-product-1.jpg',
-    './images/image-product-2.jpg',
-    './images/image-product-3.jpg',
-    './images/image-product-4.jpg'
-];
 let currentImageIndex = 0;
 
 /* function: update current image */
 function updateImage() {
-    mainImgDisplay.src = images[currentImageIndex];
-    lightboxDisplay.src = images[currentImageIndex];
+    mainImgDisplay.src = imageUrls[currentImageIndex];
+    lightboxDisplay.src = imageUrls[currentImageIndex];
 }
+
 /* function: display next image */
 function nextImage() {
     currentImageIndex++;
-    if (currentImageIndex >= images.length) {
+    if (currentImageIndex >= imageUrls.length) {
         currentImageIndex = 0;
     }
     updateImage();
 }
+
 /* function: display previous image */
 function previousImage() {
     currentImageIndex--;
     if (currentImageIndex < 0) {
-        currentImageIndex = images.length - 1;
+        currentImageIndex = imageUrls.length - 1;
     }
     updateImage();
 }
