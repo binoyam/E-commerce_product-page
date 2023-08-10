@@ -1,6 +1,6 @@
 /* image switcher variables*/
 const thumbnails = document.querySelectorAll(".thumbnail");// small thumbnails
-const productDisplay = document.querySelector(".preview"); //big image
+const mainImgDisplay = document.querySelector(".preview"); //big image
 
 /* cart variables*/
 const cartIcon = document.querySelector(".cart"); //cart icon
@@ -42,19 +42,19 @@ thumbnails.forEach((smlimg) => {
         const activeImg = document.querySelector(".active");
         switch (activeImg.getAttribute("src")) {
             case "./images/image-product-1-thumbnail.jpg":
-                productDisplay.src = "./images/image-product-1.jpg";
+                mainImgDisplay.src = "./images/image-product-1.jpg";
                 lightboxDisplay.src = "./images/image-product-1.jpg";
                 break;
             case "./images/image-product-2-thumbnail.jpg":
-                productDisplay.src = "./images/image-product-2.jpg";
+                mainImgDisplay.src = "./images/image-product-2.jpg";
                 lightboxDisplay.src = "./images/image-product-2.jpg";
                 break;
             case "./images/image-product-3-thumbnail.jpg":
-                productDisplay.src = "./images/image-product-3.jpg";
+                mainImgDisplay.src = "./images/image-product-3.jpg";
                 lightboxDisplay.src = "./images/image-product-3.jpg";
                 break;
             case "./images/image-product-4-thumbnail.jpg":
-                productDisplay.src = "./images/image-product-4.jpg";
+                mainImgDisplay.src = "./images/image-product-4.jpg";
                 lightboxDisplay.src = "./images/image-product-4.jpg";
                 break;
         }
@@ -112,17 +112,58 @@ function addToCart() {
 }
 
 /*function: remove cart contents*/
-
 function removeCart() {
-    // counter = 0;
+    counter = 0;
     cartEmptyMessage.style.display = "block";
     cartBox.style.display = "none";
     cartNotification.classList.remove("notify");
+    prodQuantity.innerText = counter;
 }
 /* function: open lightbox */
+mainImgDisplay.addEventListener('click', () => {
+    lightBox.classList.remove("hidden");
+});
 /*function: close lightbox effect */
-/* function: display previous image */
+closeBtn.addEventListener('click', () => {
+    lightBox.classList.add("hidden");
+});
+
+/* previous / next button functions*/
+previousBtn.addEventListener('click', previousImage);
+nextBtn.addEventListener('click', nextImage);
+
+/* image gallery variables*/
+const images = [
+    './images/image-product-1.jpg',
+    './images/image-product-2.jpg',
+    './images/image-product-3.jpg',
+    './images/image-product-4.jpg'
+];
+let currentImageIndex = 0;
+
+/* function: update current image */
+function updateImage() {
+    mainImgDisplay.src = images[currentImageIndex];
+    lightboxDisplay.src = images[currentImageIndex];
+}
 /* function: display next image */
+function nextImage() {
+    currentImageIndex++;
+    if (currentImageIndex >= images.length) {
+        currentImageIndex = 0;
+    }
+    updateImage();
+}
+/* function: display previous image */
+function previousImage() {
+    currentImageIndex--;
+    if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1;
+    }
+    updateImage();
+}
+
+
 
 
 

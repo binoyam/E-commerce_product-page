@@ -25,7 +25,9 @@ body {
     height: 100vh;
     background-color: var(--White);
 }
-
+.full{
+    position: relative;
+}
 ul {
     list-style: none;
 }
