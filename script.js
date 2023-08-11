@@ -94,7 +94,7 @@ function addToCart() {
 
         cartBox.innerHTML = `<div class="cart-content">
         <img class="prd" src="./images/image-product-1-thumbnail.jpg" alt="product1">
-        <div class="product-detail">
+        <div class="cart-product-detail">
           <p class="name">Fall Limited Edition Sneakers</p>
           <p class="calculate">
             <span class="price">$125.00</span>

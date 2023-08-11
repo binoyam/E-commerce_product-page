@@ -24,9 +24,12 @@ body {
     height: 100vh;
     background-color: var(--White);
 }
-.full{
+
+.full {
+    height: 100vh;
     position: relative;
 }
+
 ul {
     list-style: none;
 }
@@ -73,7 +76,8 @@ group all common buttonstyles/fontstyles/... together to avoid repeating */
 }
 
 .logo-div {
-    min-width: 100px;
+    min-width: 150px;
+    margin-right: 2rem;
 }
 
 img.logo {
@@ -162,7 +166,7 @@ img.profile-pic:hover {
 .cart-div.active-cart {
     width: 35%;
     height: 300px;
-    right: -40px;
+    right: -10px;
     bottom: -280px;
 }
 
@@ -186,7 +190,8 @@ img.profile-pic:hover {
 .cart-box {
     padding: 2rem;
     height: 220px;
-    display: flex;
+    display: none;
+    /*check?! */
     flex-direction: column;
     justify-content: space-between;
 }
@@ -204,7 +209,7 @@ img.profile-pic:hover {
     justify-content: space-between;
 }
 
-.product-detail {
+.cart-product-detail {
     width: 75%;
     display: flex;
     flex-direction: column;
@@ -257,18 +262,21 @@ button.checkout {
     cursor: pointer;
 }
 
+/*end of cart dropdown content styles */
+
 /* end of nav elemnt styes*/
 
 /* main area elemnts styles*/
 /*product preview and info are*/
 main {
     position: relative;
+    margin: 3rem;
 }
 
 .product-div {
     display: flex;
     align-items: center;
-    margin: 4rem;
+    gap: 2rem;
     background-color: var(--White);
     z-index: 999;
 }
@@ -281,9 +289,10 @@ main {
 /* product image display area */
 
 .product-images {
-    padding: 0 5rem;
+    padding-left: 5rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 2rem;
     height: 600px;
 }
@@ -300,7 +309,7 @@ img.preview {
 .product-image-small {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -323,6 +332,7 @@ img.thumbnail.active {
 .product-info {
     padding-right: 7rem;
     text-align: left;
+    margin-left: 3rem;
 }
 
 p.title {
@@ -431,7 +441,88 @@ button.addtocart {
 button.addtocart img {
     margin-right: 1rem;
 }
-/*tasks left
-** styling for mobile screen menu
-** styling for mobile screen layout
-/* make responisve for tablet and mobile screens*/
+
+/*for smaller screens/ Tablet screens */
+@media only screen and (max-width:1220px) {
+    .nav-bar {
+        margin: 0 3rem;
+    }
+
+    .product-info {
+        padding-right: 3rem;
+        margin-left: 2rem;
+    }
+
+    .product-images {
+        padding-left: 2rem;
+        height: 500px;
+    }
+
+    h1.product-name {
+        font-size: 35px;
+        margin-bottom: 1rem;
+    }
+
+    p.product-detail {
+        margin-bottom: 1rem;
+    }
+
+    .prices {
+        margin-bottom: 1rem;
+    }
+
+    .cart-box {
+        padding: 2rem 1.2rem;
+    }
+
+    .cart-div.active-cart {
+        width: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    h1.product-name {
+        font-size: 30px;
+    }
+
+    p.product-detail {
+        font-size: 16px;
+    }
+
+    .product-images {
+        height: 400px;
+    }
+
+    p.name,
+    span.price,
+    span.times,
+    span.amount {
+        font-size: 16px;
+    }
+
+    button.addtocart {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:860px) {
+    p.price-current {
+        font-size: 25px;
+    }
+
+    h1.product-name {
+        font-size: 25px;
+        margin-bottom: 0.6rem;
+    }
+
+    p.product-detail {
+        margin-bottom: 0.6rem;
+    }
+
+    .prices {
+        margin-bottom: 1rem;
+    }
+}
+
+/* for Small screens / for mobile screens */
