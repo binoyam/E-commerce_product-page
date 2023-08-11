@@ -500,13 +500,15 @@ button.addtocart img {
     span.amount {
         font-size: 16px;
     }
-
+    span.quantity{
+        font-size: 16px;
+    }
     button.addtocart {
         font-size: 16px;
     }
 }
 
-@media only screen and (max-width:860px) {
+@media only screen and (max-width: 860px) {
     p.price-current {
         font-size: 25px;
     }
@@ -523,6 +525,41 @@ button.addtocart img {
     .prices {
         margin-bottom: 1rem;
     }
+    
 }
 
 /* for Small screens / for mobile screens */
+@media only screen and (max-width: 830px) {
+    main{
+        margin: 0;
+    }
+    .menu-btn{
+        display: block;
+        position: absolute;
+    }
+    img.logo{
+        margin-left: 3rem;
+    }
+    .menu{
+        display: none;
+    }
+    .product-div{
+        flex-direction: column;
+    }
+    .product-images,
+    .product-info{
+        width: 100%;
+    }
+    .product-images{
+        padding: 0;
+    }
+    .product-image-large{
+        border-radius: 0;
+    }
+    .product-image-small{
+        display: none;
+    }
+    .product-info{
+        padding: 0;
+    }
+}
