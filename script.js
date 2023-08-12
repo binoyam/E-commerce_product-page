@@ -23,6 +23,25 @@ const previousBtn = document.querySelector(".previous-btn");// left arrow
 const nextBtn = document.querySelector(".next-btn");// right arrow
 const lightboxDisplay = document.querySelector(".lightbox-preview")//lightbox big image
 
+/*mobile screen varables */
+const menu = document.querySelector(".menu");
+const menuBtn = document.querySelector(".menu-btn");
+const closeMenuBtn = document.querySelector(".close-btn");
+const menuBg = document.querySelector(".shield");
+
+/* function: open menu on mobile*/
+menuBtn.addEventListener('click', openMenu);
+closeMenuBtn.addEventListener('click', closeMenu);
+
+function openMenu() {
+    menu.classList.add("on")
+    menuBg.classList.add("on");
+}
+function closeMenu() {
+    menu.classList.remove("on");
+    menuBg.classList.remove("on");
+}
+
 /* images urls*/
 const imageUrls = [
     './images/image-product-1.jpg',
