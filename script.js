@@ -24,10 +24,24 @@ const nextBtn = document.querySelector(".next-btn");// right arrow
 const lightboxDisplay = document.querySelector(".lightbox-preview")//lightbox big image
 
 /*mobile screen varables */
-const menu = document.querySelector(".menu");
-const menuBtn = document.querySelector(".menu-btn");
-const closeMenuBtn = document.querySelector(".close-btn");
-const menuBg = document.querySelector(".shield");
+const menu = document.querySelector(".menu");//menu sidebar 
+const menuBtn = document.querySelector(".menu-btn");//hamburger
+const closeMenuBtn = document.querySelector(".close-btn");//close menu btn
+const menuBg = document.querySelector(".shield");// transparent background for menu sidebar
+const next = document.querySelector(".mobile-next");//next btn 
+const previous = document.querySelector(".mobile-previous");//previous btn
+
+/* images urls*/
+const imageUrls = [
+    './images/image-product-1.jpg',
+    './images/image-product-2.jpg',
+    './images/image-product-3.jpg',
+    './images/image-product-4.jpg'
+];
+
+/*function: next/previous button for mobile screens */
+next.addEventListener('click', nextImage);
+previous.addEventListener('click', previousImage);
 
 /* function: open menu on mobile*/
 menuBtn.addEventListener('click', openMenu);
@@ -41,14 +55,6 @@ function closeMenu() {
     menu.classList.remove("on");
     menuBg.classList.remove("on");
 }
-
-/* images urls*/
-const imageUrls = [
-    './images/image-product-1.jpg',
-    './images/image-product-2.jpg',
-    './images/image-product-3.jpg',
-    './images/image-product-4.jpg'
-];
 
 /* function: show/ hide cart dropdown */
 cartIcon.addEventListener('click', () => {
@@ -87,7 +93,7 @@ thumbnails.forEach((smlimg) => {
 
 /* function: update qunatity */
 plusBtn.addEventListener('click', incrementQuantity);
-minusBtn.addEventListener('click', decrementQuantity)
+minusBtn.addEventListener('click', decrementQuantity);
 
 function incrementQuantity() {
     counter++;
@@ -181,8 +187,3 @@ function previousImage() {
     }
     updateImage();
 }
-
-/*tasks left*/
-/* function for mobile screen
-** menu
-*/

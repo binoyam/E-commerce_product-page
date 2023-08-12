@@ -38,6 +38,7 @@ svg.close {
 svg.close:hover #close-path {
     fill: var(--Orange);
 }
+
 /* END OF close button inside lightbox */
 
 /* lightbox images holder */
@@ -46,8 +47,8 @@ svg.close:hover #close-path {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 500px;
-    height: 620px;
+    width: 100%;
+    height: 100%;
 }
 
 /* big image*/
@@ -122,3 +123,16 @@ svg.next {
 }
 
 /* END of previous and next button styles */
+
+@media only screen and (max-width:600px) {
+    .light-box-div {
+        align-items: baseline;
+    }
+
+    .light-box {
+        margin-top: 5rem;
+        width: 300px;
+        height: 370px;
+    }
+
+}

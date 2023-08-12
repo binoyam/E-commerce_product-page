@@ -21,7 +21,7 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--White);
 }
 
@@ -314,6 +314,11 @@ img.preview {
     width: 100%;
 }
 
+.mobile-previous,
+.mobile-next {
+    display: none;
+}
+
 .product-image-small {
     display: flex;
     align-items: center;
@@ -542,7 +547,6 @@ button.addtocart img {
 /* for Small screens / for mobile screens */
 @media only screen and (max-width: 830px) {
 
-
     .nav-bar {
         padding: 1rem 1.4rem;
     }
@@ -607,7 +611,7 @@ button.addtocart img {
         bottom: 0;
         left: 0;
         right: 0;
-        min-height: 100vh;
+        min-height: 120vh;
         background-color: var(--Black);
         opacity: 75%;
         z-index: 999999;
@@ -621,10 +625,11 @@ button.addtocart img {
         flex-direction: column;
         top: 0;
         left: 0;
-        padding: 2.2rem;
+        bottom: 0;
+        padding: 2.2rem 2.2rem 0;
         gap: 2rem;
         width: 60%;
-        min-height: 100vh;
+        min-height: 120vh;
         background-color: var(--White);
         z-index: 999999;
     }
@@ -720,4 +725,40 @@ button.addtocart img {
     button.addtocart {
         width: 100%;
     }
+
+    .product-image-large {
+        position: relative;
+    }
+
+    .mobile-previous,
+    .mobile-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--White);
+    }
+
+    .mobile-previous {
+        left: 10px;
+    }
+
+    .mobile-next {
+        right: 10px;
+    }
 }
+
+/* 
+** check the z index of elemnts(cart dropdown,menu...)
+** add a message after checkout button is clicked
+** make code more readable...add more comments
+** 
+**/
